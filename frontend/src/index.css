@@ -1,0 +1,344 @@
+/* General Page Layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main Content Wrapper */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the page covers the entire viewport height */
+}
+
+/* Main Content Area */
+main {
+  flex: 1; /* Take up remaining space between navbar and footer */
+}
+
+
+/* General Navbar Styling */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: white;
+}
+
+nav h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* Mobile Menu Styling */
+.mobile-menu {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav h1 {
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #444;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .mobile-menu {
+    display: block;
+    color: white;
+  }
+}
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+/* Footer Styling */
+footer {
+  background-color: #222; /* Dark background color for contrast */
+  color: #fff; /* Light text color */
+  text-align: center;
+  padding: 1rem 0; /* Space inside the footer */
+  font-size: 0.9rem; /* Slightly smaller font size */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for elevation */
+}
+
+/* Footer Links */
+footer a {
+  color: #ffd700; /* Gold for links */
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  color: #fff; /* Highlight effect on hover */
+  text-decoration: underline;
+}
+
+/* Footer Social Icons */
+footer .social-icons {
+  margin: 1rem 0;
+}
+
+footer .social-icons a {
+  color: #fff; /* Default color */
+  margin: 0 0.5rem;
+  font-size: 1.5rem; /* Bigger icons */
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: #ffd700; /* Change color on hover */
+  transform: scale(1.2); /* Slight zoom effect */
+}
+
+
+
+.welcome{
+  color: #f1356d;
+ 
+
+  
+}
+.about-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+
+.about-text {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.projects-container {
+  padding: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: box-shadow 0.3s;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.section-title{
+  color: #f1356d;
+}
+
+/* Common styles for all project cards */
+.project-card {
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styles for each project */
+.project-card.portfolio {
+  background-color: #4caf50; /* Green */
+  border: 2px solid #388e3c;
+  color: white;
+}
+
+.project-card.ecommerce {
+  background-color: #2196f3; /* Blue */
+  border: 2px solid #1976d2;
+  color: black;
+}
+
+.project-card.datacollection {
+  background-color: dimgray; 
+  border: 2px solid #388e3c;
+  color: white;
+}
+
+.project-card.portal {
+  background-color: rgba(24, 7, 1, 0.932); 
+  border: 2px solid #388e3c;
+  color: whitesmoke;
+}
+/* Link styling */
+.project-card a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  color: #ffd700; /* Gold on hover */
+}
+.contact input, .contact textarea, .contact button, .contact select{
+  width: 40%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid rgb(128, 0, 38);
+  box-sizing: border-box;
+  display: block;
+  margin-left: 290px;
+}
+
+.about-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.Me{
+  color: #f1356d;
+  text-align: center;
+}
+.footer{
+  margin-top: 50vh;
+  background: #333;
+  color: white;
+  padding: 0px;
+}
+.contact{
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact input, .contact textarea, .contact select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+  border-radius: 8px;
+}
+.contact button{
+  background: #f1356d;
+  color: #fff;
+  margin: 10px 0;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+.contact select{
+  width: 200px; /* Set desired width for the dropdown */
+  margin-left: 100px;
+  color: whitesmoke;
+  background-color: rgba(17, 9, 9, 0.699);
+}
+.select option {
+  text-align: center; /* Center align the options */
+}
+.bold{
+  color: rgba(192, 50, 7, 0.76);
+}
+
+.strong{
+  color: red;
+}
